@@ -1,0 +1,140 @@
+<div align="center">
+
+# 🤖 RAG Document Chatbot  
+### Retrieval-Augmented Generation with LangChain & OpenAI
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)]
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-red.svg)]
+[![LangChain](https://img.shields.io/badge/LangChain-RAG-green.svg)]
+[![ChromaDB](https://img.shields.io/badge/VectorDB-Chroma-purple.svg)]
+[![Status](https://img.shields.io/badge/Status-Interview%20Ready-success.svg)]
+
+A clean, production-aware implementation of a **Retrieval-Augmented Generation (RAG)** system  
+that allows users to **chat with their own documents**.
+
+</div>
+
+---
+
+## ✨ Overview
+
+Large Language Models are powerful but can hallucinate when they lack context.  
+This project solves that problem using **Retrieval-Augmented Generation (RAG)**.
+
+Users upload documents, and the system retrieves the most relevant content  
+before generating responses — ensuring **accurate, grounded answers**.
+
+---
+
+## 🧠 RAG Architecture
+
+```text
+User Question
+      ↓
+Vector Search (ChromaDB)
+      ↓
+Relevant Document Chunks
+      ↓
+LLM (OpenAI)
+      ↓
+Final Answer + Source Documents
+
+🚀 Features
+
+📄 Upload documents (PDF, TXT, DOCX, CSV)
+
+✂️ Intelligent text chunking
+
+🧠 Semantic embeddings using OpenAI
+
+🔎 Fast vector similarity search with ChromaDB
+
+💬 Conversational chat with memory
+
+📌 Transparent answers with source references
+
+🎯 Simple, interview-ready design
+
+## 🛠 Tech Stack
+Layer	Technology
+Language	Python
+UI	Streamlit
+RAG Framework	LangChain
+Vector Database	ChromaDB
+LLM & Embeddings	OpenAI
+
+📂 Project Structure
+
+RAG_chatbot/
+│
+├── RAG_app.py
+├── README.md
+├── requirements.txt
+│
+├── data/
+│   ├── tmp/              # Temporary uploaded files
+│   └── vector_store/     # Generated at runtime (gitignored)
+│
+└── .gitignore
+
+## ▶️ Getting Started
+
+1️⃣ Install Dependencies
+pip install -r requirements.txt
+
+2️⃣ Run the Application
+streamlit run RAG_app.py
+
+3️⃣ Use the Chatbot
+
+1. Enter your OpenAI API key
+
+2. Upload one or more documents
+
+3. Create the vector store
+
+4. Ask questions about your data
+
+## 🔐 Security & Best Practices
+
+API keys are entered at runtime and never stored
+
+Vector databases are generated dynamically
+
+.env, temporary files, and vector stores are excluded from Git
+
+No pre-built embeddings are committed
+
+## 🎯 Design Philosophy
+
+Focus on core RAG concepts, not demo overload
+
+One LLM provider for clarity and explainability
+
+Simple retriever strategy for reliability
+
+Code that is easy to explain and defend in interviews
+
+## 📚 Learning Outcomes
+
+This project demonstrates:
+
+Practical understanding of Retrieval-Augmented Generation
+
+How vector search grounds LLM responses
+
+Trade-offs in chunk size and retrieval depth
+
+Conversational memory management
+
+Building real-world LLM applications responsibly
+
+## 📝 Note on Authorship
+
+This project is inspired by publicly available RAG examples and official documentation.
+The implementation has been refactored, simplified, and structured to clearly demonstrate
+understanding of RAG fundamentals and production-aware design.
+
+<div align="center">
+⭐ If you find this project useful, feel free to star the repository.
+</div> ```
